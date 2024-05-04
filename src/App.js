@@ -44,23 +44,27 @@ function App() {
 					constValue={NUM_OF_EMP} //number of emp constant value
 					flt={flt}
 					setFlt={setFlt}
+					isMultiSelect={true}
 					inputPlaceholder={"Number Of Employees"}
 				/>
 				<AutoCompleteInp
 					constValue={EXPE} //expe constant values
 					flt={flt}
 					setFlt={setFlt}
+					isMultiSelect={false}
 					inputPlaceholder={"Experience"}
 				/>
 				<AutoCompleteInp
 					constValue={REMOTE} //job type constant value
 					flt={flt}
+					isMultiSelect={true}
 					setFlt={setFlt}
 					inputPlaceholder={"Remote"}
 				/>
 				<AutoCompleteInp
 					constValue={BASE_PAY} //Base pay constant value
 					flt={flt}
+					isMultiSelect={false}
 					setFlt={setFlt}
 					inputPlaceholder={"Minimum Base Pay Salary"}
 				/>
