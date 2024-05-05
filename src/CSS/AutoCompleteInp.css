@@ -1,0 +1,104 @@
+.MuiAutocomplete-root {
+	min-width: 250px;
+	width: max-content;
+	margin: 2px 5px 2px 0;
+}
+
+.MuiAutocomplete-root > .MuiFormLabel-root {
+	min-width: 250px;
+}
+
+.MuiAutocomplete-root > .MuiAutocomplete-inputRoot {
+	width: max-content;
+	display: flex;
+	flex-direction: row;
+	min-width: 280px;
+}
+
+.css-clttge-MuiAutocomplete-root .MuiInput-root,
+.app__header-searchInp > .css-1eed5fa-MuiInputBase-root-MuiInput-root {
+	border: 1px solid rgb(204, 204, 204);
+	outline: 0;
+	border-radius: 4px;
+}
+.css-953pxc-MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled, .Mui-error):before,
+.css-953pxc-MuiInputBase-root-MuiInput-root::before,
+.css-1eed5fa-MuiInputBase-root-MuiInput-root::after,
+.css-1eed5fa-MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled, .Mui-error):before,
+.app__header-searchInp > .css-1eed5fa-MuiInputBase-root-MuiInput-root::before {
+	border-bottom: none !important; /* reverting existing MUI styles  */
+}
+
+.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
+	top: 2px !important; /* reverting existing MUI styles  */
+	left: 5px !important; /* reverting existing MUI styles  */
+}
+
+.css-953pxc-MuiInputBase-root-MuiInput-root::after {
+	border: none !important; /* reverting existing MUI styles  */
+}
+
+.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+	color: rgba(0, 0, 0, 0.6) !important; /* reverting existing MUI styles  */
+}
+
+.css-clttge-MuiAutocomplete-root .MuiAutocomplete-tag {
+	border-radius: 0;
+	height: 25px;
+}
+.css-38raov-MuiButtonBase-root-MuiChip-root .MuiChip-deleteIcon {
+	color: #000 !important;
+	background: transparent !important;
+}
+
+.css-38raov-MuiButtonBase-root-MuiChip-root .MuiChip-deleteIcon:hover {
+	color: red !important;
+	background: rgb(255 206 206) !important;
+}
+
+.css-38raov-MuiButtonBase-root-MuiChip-root .MuiChip-deleteIcon {
+	margin: 0 !important;
+	font-size: 14px !important;
+	padding: 5px 4px !important;
+}
+
+.MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.css-clttge-MuiAutocomplete-root .MuiAutocomplete-inputRoot {
+	padding-right: 20px !important;
+}
+
+/* styles for experience input */
+.MuiAutocomplete-root.experience,
+.MuiAutocomplete-root.experience > .MuiFormLabel-root,
+.MuiAutocomplete-root.experience > .MuiAutocomplete-inputRoot {
+	min-width: 110px;
+}
+.css-clttge-MuiAutocomplete-root.experience .MuiAutocomplete-inputRoot .MuiAutocomplete-input,
+.css-clttge-MuiAutocomplete-root.base_pay .MuiAutocomplete-inputRoot .MuiAutocomplete-input {
+	min-width: 0;
+}
+
+/* styles for experience remote */
+.MuiAutocomplete-root.remote,
+.MuiAutocomplete-root.remote > .MuiFormLabel-root,
+.MuiAutocomplete-root.remote > .MuiAutocomplete-inputRoot {
+	min-width: 100px;
+}
+
+/* styles for experience input */
+.MuiAutocomplete-root.base_pay,
+.MuiAutocomplete-root.base_pay > .MuiFormLabel-root,
+.MuiAutocomplete-root.base_pay > .MuiAutocomplete-inputRoot {
+	min-width: 225px;
+}
+
+/* styles for number of Emp input */
+.MuiAutocomplete-root.num_of_emp,
+.MuiAutocomplete-root.num_of_emp > .MuiFormLabel-root,
+.MuiAutocomplete-root.num_of_emp > .MuiAutocomplete-inputRoot {
+	min-width: 200px;
+}
+
+.MuiAutocomplete-root.experience .css-1glvl0p-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator,
+.MuiAutocomplete-root.base_pay .css-1glvl0p-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator {
+	display: none !important;
+}

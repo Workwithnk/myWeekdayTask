@@ -1,33 +1,57 @@
-import { Autocomplete, TextField } from "@mui/material";
-import React, { useState } from "react";
+import { Autocomplete, TextField, GroupHeader, GroupItems } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { MdClose } from "react-icons/md";
 
-function AutoCompleteInp({ constValue, flt, setFlt, inputPlaceholder, isMultiSelect }) {
+import "./CSS/AutoCompleteInp.css";
+
+function AutoCompleteInp({ constValue, flt, setFlt, inputPlaceholder, isMultiSelect, classDetails }) {
 	const [users, setUsers] = useState([]);
 	const [inputValue, setInputValue] = useState("");
+
+	useEffect(() => {
+		if (inputPlaceholder === "Roles") {
+			setFlt({ ...flt, roles: [...users] });
+		} else if (inputPlaceholder === "Number Of Employees") {
+			setFlt({ ...flt, number_of_emp: [...users] });
+		} else if (inputPlaceholder === "Experience") {
+			setFlt({ ...flt, experience: [...users] });
+		} else if (inputPlaceholder === "Remote") {
+			setFlt({ ...flt, remote: [...users] });
+		} else if (inputPlaceholder === "Minimum Base Pay Salary") {
+			setFlt({ ...flt, base_salary: [...users] });
+		}
+	}, [users]);
 
 	return (
 		<div>
 			<Autocomplete
 				multiple
-				value={constValue.filter((el) => users.includes(el.value))}
+				value={users?.length > 0 ? constValue.filter((el) => users.includes(el.value)) : []}
 				onChange={(event, newValue) => {
-					setUsers(newValue.map((el) => el.value));
-					if (!isMultiSelect) {
-						setUsers([newValue[newValue.length - 1].value]);
+					if (newValue.length === 0) {
+						setUsers([]);
 					} else {
-						setUsers(newValue.map((el) => el.value));
+						setInputValue("");
+						if (!isMultiSelect && newValue?.length > 0) {
+							setUsers([newValue[newValue.length - 1].value]);
+						} else {
+							setUsers(newValue.map((el) => el.value));
+						}
 					}
 				}}
 				inputValue={inputValue}
 				onInputChange={(event, newInputValue) => {
-					console.log("newInputValue", newInputValue);
-					setInputValue(newInputValue);
+					newInputValue && setInputValue(newInputValue);
 				}}
 				id="controllable-states-demo"
+				className={classDetails}
 				isOptionEqualToValue={(option, value) => option.id === value.id}
 				options={isMultiSelect ? constValue.filter((el) => !users.includes(el.value)) : constValue}
-				// options={constValue}
+				ChipProps={{
+					deleteIcon: <MdClose />
+				}}
 				getOptionLabel={(option) => option.value}
+				getOptionDisabled={(option) => typeof option.id === "string" && option?.id?.includes("title")}
 				renderInput={(params) => (
 					<TextField
 						{...params}
