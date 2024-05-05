@@ -2,4 +2,30 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	margin: 20px 0 40px;
+}
+
+.infinite-scroll-component {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+	gap: 0px;
+	justify-items: center;
+}
+
+@media only screen and (min-width: 970px) {
+	.infinite-scroll-component {
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	}
+}
+
+@media only screen and (min-width: 1120px) {
+	.infinite-scroll-component {
+		grid-template-columns: repeat(auto-fill, minmax(305px, 1fr));
+	}
+}
+
+@media only screen and (min-width: 1120px) {
+	.infinite-scroll-component {
+		grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+	}
 }

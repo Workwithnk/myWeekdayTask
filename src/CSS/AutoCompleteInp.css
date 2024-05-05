@@ -66,6 +66,10 @@
 	padding-right: 20px !important;
 }
 
+.css-1x51dt5-MuiInputBase-input-MuiInput-input {
+	padding-left: 5px !important;
+}
+
 /* styles for experience input */
 .MuiAutocomplete-root.experience,
 .MuiAutocomplete-root.experience > .MuiFormLabel-root,
